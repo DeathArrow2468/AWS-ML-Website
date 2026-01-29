@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ML Model Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="top-bar">
+  <div class="title">
+    <h1>ML Model Explorer</h1>
+    <p>Automated training, evaluation & artifact exploration</p>
+  </div>
+
+  <!-- Club logo -->
+  <img src="ADGLOGO.png" alt="Club Logo" class="logo" />
+</header>
+
+<!-- Upload Section -->
+<section class="upload-section">
+  <h2>Upload Dataset</h2>
+  <p>
+    Upload a CSV file containing a <code>label</code> column.
+    This will automatically trigger preprocessing and training.
+  </p>
+
+  <div class="upload-box">
+    <input type="file" id="fileInput" accept=".csv" />
+    <button onclick="uploadFile()">Upload & Train</button>
+  </div>
+
+  <p id="uploadStatus" class="status"></p>
+</section>
+
+<!-- Models -->
+<section class="models-section">
+  <h2>Trained Models</h2>
+  <div id="model-cards"></div>
+</section>
+
+<footer>
+  Built with AWS • SageMaker • Lambda • S3
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
